@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --ff-primary: 'Inter', sans-serif;;
+    --text-color: #eee7e7f8;
+
+    --bg-page:  rgb(1, 15, 19);
+    --bg-blue-lighter: rgb(7, 59, 68);
+    --bg-second-blue: rgb(5, 44, 51);
+    --bg-third-blue: rgb(5, 30, 34);
+}
+
+body {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: var(--bg-page);
+}
+
+body * {
+    font-family: var(--ff-primary);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+#app {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    padding-top: 8rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 3rem;
+    margin: 2.5rem 0;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    color: #FFF;
+    height: 3.2rem;
+    width: 45rem;
+    border: 1px solid rgb(7, 75, 85);
+    border-radius: .4rem 0 0 .4rem;
+    padding: 0 .8rem;
+    background-color: rgb(5, 30, 34);
+}
+
+#input-search placeholder {
+    color: #FFF;
+}
+
+.search button {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-blue-lighter);
+    border-radius: 0 .4rem .4rem 0;
+    height: 3.2rem;
+    border: none;
+    padding: 0 1rem;
+    color: #FFF;
+}
+
+.search button img {
+    height: 1.6rem;
+    padding-right: 0.4rem;
+}
+
+.search button:hover {
+    filter: brightness(1.4);
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+
+table * {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+table th {
+    background:  var(--bg-blue-lighter);
+    text-align: center;
+    font-weight: normal;
+    padding: 1.5rem;
+}
+
+table th:first-child {
+    border-top-left-radius: 1.2rem;
+
+}
+
+table th:last-child {
+    border-top-right-radius: 1.2rem;
+}
+
+table tr:nth-child(odd) {
+    background: var(--bg-second-blue);
+
+}
+
+table tr {
+    background: var(--bg-third-blue);
+}
+
+table td {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+td.user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+td.user img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+td.user a {
+    text-decoration: none;
+}
+
+td.user a p {
+    font-weight: bold;
+}
+
+td .remove {
+    font-size: 1.4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(218, 83, 83);
+}
+
+.empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7rem;
+}
+
+.empty .empty-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    color: #ffffffad;
+}
+
+.hide {
+    display: none;
+    transition: display .5s ease;
+}
